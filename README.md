@@ -23,9 +23,10 @@ $social_links = get_the_social_links(
     )
 );
 
+//Create icon links
 foreach($social_links as $name=>$link): ?>
     <a href="<?php echo $link; ?>" target="_blank">
-        <i class="icon-<?php echo $name == 'google' ? 'gplus' : $name; ?>"></i>
+        <i class="icon-<?= $name; ?>"></i>
     </a>
 <?php endforeach; ?>
 ```
