@@ -2,7 +2,7 @@
 ###Class Creating Simple Social Links.
 
 The class can be used on it's own or as a wordpress plugin. The current repo is set up to be a wordpress plugin.
-The php class was based on the word of [this javascript social share link repo](https://github.com/bradvin/social-share-urls).
+The php class was based on the hard work of [this javascript social share link repo](https://github.com/bradvin/social-share-urls).
 
 ###Example Usage
 Example for a limited number of links.
@@ -10,9 +10,9 @@ Example for a limited number of links.
 <?php
 $social_links = get_the_social_links(
     array(
-        'url'=>'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'],
-        'title'=>get_the_title(),
-        'via'=>'acodesmith'
+        'url'=>'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'], //PHP Full URL
+        'title'=>get_the_title(), //Wordpress title
+        'via'=>'acodesmith' //Twitter tagging user: @acodesmith
     ),
     array(
         'facebook',
@@ -29,6 +29,22 @@ foreach($social_links as $name=>$link): ?>
     </a>
 <?php endforeach; ?>
 ```
+Above example output:
+```html
+<a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Facodesmith.com" target="_blank">
+    <i class="icon-facebook"></i>
+</a>
+<a href="https://twitter.com/share?url=http%3A%2F%2Facodesmith.com&amp;text=Slack+Webdev+Journal&amp;via=acodesmith" target="_blank">
+    <i class="icon-twitter"></i>
+</a>
+<a href="https://plus.google.com/share?url=http%3A%2F%2Facodesmith.com" target="_blank">
+    <i class="icon-google"></i>
+</a>
+<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Facodesmith.com&amp;title=Slack+Webdev+Journal" target="_blank">
+    <i class="icon-stumbleupon"></i>
+</a>
+```
+
 
 ###Function Parameters
 The main wordpress plugin function is "get_the_social_links". The function returns an array of links
