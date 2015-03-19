@@ -4,6 +4,18 @@
 The class can be used on it's own or as a wordpress plugin. The current repo is set up to be a wordpress plugin.
 The php class was based on the hard work of [this javascript social share link repo](https://github.com/bradvin/social-share-urls).
 
+#####Currently Support Sites
+    -facebook
+    -twitter
+    -google
+    -pinterest
+    -linkedin
+    -buffer
+    -digg
+    -tumblr
+    -reddit
+    -stumbleupon
+
 ###Example Usage
 Example for a limited number of links.
 ```php
