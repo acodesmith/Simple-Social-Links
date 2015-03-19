@@ -2,8 +2,7 @@
 ###Class Creating Simple Social Links.
 
 The class can be used on it's own or as a wordpress plugin. The current repo is set up to be a wordpress plugin.
-
-__simple_social_links__ is the wordpress plugin folder.
+The php class was based on the word of (this javascript social share link repo)[https://github.com/bradvin/social-share-urls].
 
 ###Example Usage
 Example for a limited number of links.
@@ -25,20 +24,29 @@ $social_links = get_the_social_links(
 
 //Create icon links
 foreach($social_links as $name=>$link): ?>
-    <a href="<?php echo $link; ?>" target="_blank">
+    <a href="<?= $link; ?>" target="_blank">
         <i class="icon-<?= $name; ?>"></i>
     </a>
 <?php endforeach; ?>
 ```
 
 ###Function Parameters
-The main wordpress plugin function is "get_the_social_links"
+The main wordpress plugin function is "get_the_social_links". The function returns an array of links
+related to the site.
+
+```php
+//return example
+array(
+    'facebook'=>'http://www.facebook.com/sharer.php?u={url}',
+    'twitter'=>'https://twitter.com/share?url={url}&text={title}&via={via}&hashtags={hashtags}'
+);
+```
 
 The function has two parameters. The first parameter contains information for the link.
 The URL is the only required value, other values will be used as needed per social media site.
 
 ####All Link Options
-#####Only certain sites, use certain options. For example Twitter uses via
+#####Only certain sites, use certain options.
 ```php
 $options = array(
     'url' => 'http://siteToShare.com',
@@ -50,9 +58,10 @@ $options = array(
     'desc'=> 'Longer description of text' //Tumblr only!
 );
 
-get_the_social_links($options);
+$social_links = get_the_social_links($options);
 
 ```
+All browsers have a length limit for urls, so __be aware__ of the description length!
 
 ####Link Options
 #####If left blank, all links will be returned by default
@@ -68,6 +77,6 @@ $links = array(
     'twitter'
 );
 
-get_the_social_links($options, $links);
+$social_links = get_the_social_links($options, $links);
 
 ```
