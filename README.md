@@ -2,7 +2,7 @@
 ###Class Creating Simple Social Links.
 
 The class can be used on it's own or as a wordpress plugin. The current repo is set up to be a wordpress plugin.
-The php class was based on the word of (this javascript social share link repo)[https://github.com/bradvin/social-share-urls].
+The php class was based on the word of [this javascript social share link repo](https://github.com/bradvin/social-share-urls).
 
 ###Example Usage
 Example for a limited number of links.
