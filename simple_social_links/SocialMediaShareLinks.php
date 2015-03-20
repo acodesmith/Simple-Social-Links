@@ -1,6 +1,8 @@
 <?php
 /**
  * Social Media Share Links
+ * See Github or Readme for help
+ * https://github.com/acodesmith/Simple-Social-Links
  */
 
 class SocialMediaShareLinks {

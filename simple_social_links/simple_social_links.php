@@ -6,7 +6,7 @@
  * Version: 1.0
  * Author: WideOpenTech
  * Author URI: http://wideopentech.com
- * License: MS Reference
+ * License: GNU
  */
 
 
