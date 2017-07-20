@@ -1,10 +1,10 @@
 # Simple Social Links
-###Class Creating Simple Social Links.
+### Class Creating Simple Social Links.
 
 The class can be used on it's own or as a wordpress plugin. The current repo is set up to be a wordpress plugin.
 The php class was based on the hard work of [this javascript social share link repo](https://github.com/bradvin/social-share-urls).
 
-#####Currently Support Sites
+##### Currently Support Sites
     -facebook
     -twitter
     -google
@@ -16,7 +16,7 @@ The php class was based on the hard work of [this javascript social share link r
     -reddit
     -stumbleupon
 
-###Example Usage
+### Example Usage
 Example for a limited number of links.
 ```php
 <?php
@@ -58,7 +58,7 @@ Above example output:
 ```
 
 
-###Function Parameters
+### Function Parameters
 The main wordpress plugin function is "get_the_social_links". The function returns an array of links
 related to the site.
 
@@ -73,8 +73,8 @@ array(
 The function has two parameters. The first parameter contains information for the link.
 The URL is the only required value, other values will be used as needed per social media site.
 
-####All Link Options
-#####Only certain sites, use certain options.
+#### All Link Options
+##### Only certain sites, use certain options.
 ```php
 $options = array(
     'url' => 'http://siteToShare.com',
@@ -91,8 +91,8 @@ $social_links = get_the_social_links($options);
 ```
 All browsers have a length limit for urls, so __be aware__ of the description length!
 
-####Link Options
-#####If left blank, all links will be returned by default
+#### Link Options
+##### If left blank, all links will be returned by default
 Get only facebook and twitter links with a URL and title.
 ```php
 $options = array(
