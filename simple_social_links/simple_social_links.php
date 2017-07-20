@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Simple Social Links
- * Plugin URI: https://github.com/wideopentech
+ * Plugin URI: https://github.com/acodesmith/Simple-Social-Links
  * Description: Simple Plain Text Links for Sharing on Social Media - Help page load time and user privacy
- * Version: 1.0
- * Author: WideOpenTech
- * Author URI: http://wideopentech.com
+ * Version: 1.1
+ * Author: ACODESMITH
+ * Author URI: http://acodesmith.com
  * License: GNU
  */
 
